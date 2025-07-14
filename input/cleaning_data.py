@@ -5,10 +5,10 @@ from logs.logging_config import setup_logging
 
 setup_logging()
 
-def is_datetime(df):
+def is_datetime(df, column: str):
     try:
-        df['release_date'] = pd.to_datetime(
-            df['release_date'],
+        df[column] = pd.to_datetime(
+            df[column],
             format='%m/%d/%y',
             errors='coerce'
         )
@@ -17,9 +17,9 @@ def is_datetime(df):
     except Exception:
         logging.exception("Error clean format datetime!")
 
-def is_numeric(df):
+def is_numeric(df, column: str):
     try:
-        df['vote_average'] = pd.to_numeric(df['vote_average'], errors='coerce')
+        df[column] = pd.to_numeric(df[column], errors='coerce')
         logging.info("Success format numeric")
         return df
     except Exception:

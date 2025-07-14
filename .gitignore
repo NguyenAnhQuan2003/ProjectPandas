@@ -2,3 +2,6 @@ tmdbs-movies.csv
 app.log
 sort_by_release_date.csv
 high_vote.csv
+revenue_max_min.txt
+revenue_sum.txt
+revenue_top.txt

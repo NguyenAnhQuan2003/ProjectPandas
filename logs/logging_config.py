@@ -1,7 +1,8 @@
 import logging
+from config.paths import OUTPUT_LOGS
 
 def setup_logging(
-    log_file='/Users/nguyenanhquan/Desktop/ProjectPandas/logs/app.log',
+    log_file=OUTPUT_LOGS,
     level=logging.INFO,
     log_format='%(asctime)s - %(levelname)s - %(message)s'
 ):
