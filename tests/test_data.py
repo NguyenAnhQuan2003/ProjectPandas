@@ -1,4 +1,4 @@
-from src.load_csv import load_csv, load_high_vote_csv
+from src.load_csv import load_high_vote_csv
 import logging
 from logs.logging_config import setup_logging
 
@@ -16,4 +16,5 @@ def test_data_high_vote():
 if __name__ == '__main__':
     # test_data_high_vote()
     print(df.columns.tolist())
-    print(df['revenue'].sum())
+    # print(df['director'])
+    print(df['genres'].head(10))
